@@ -27,9 +27,11 @@ const Home = (props) => {
       <Menu />
       <main>
         <div className={styles.left}>
-          <h1>Welcome to <br /> FC Bethel International.</h1>
-          <p>Football made easy with our exceptional teaching methods and development program.</p>
-          <Link to="/about">LEARN MORE</Link>
+          <Fade delay={400}>
+            <h1>Welcome to <br /> FC Bethel International.</h1>
+            <p>Football made easy with our exceptional teaching methods and development program.</p>
+            <Link to="/about">LEARN MORE</Link>
+          </Fade>
         </div>
         <div className={styles.right}>
           <Fade left>
