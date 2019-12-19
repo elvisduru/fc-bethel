@@ -3,6 +3,8 @@ import styles from './Home.module.css';
 import Menu from '../../containers/Menu/Menu';
 import { Link, withRouter } from 'react-router-dom';
 
+import { Fade } from "react-reveal";
+
 import playerImg from '../../images/player2.png';
 import arrowDown from '../../images/arrow-down.svg';
 
@@ -30,7 +32,9 @@ const Home = (props) => {
           <Link to="/about">LEARN MORE</Link>
         </div>
         <div className={styles.right}>
-          <img src={playerImg} alt="" />
+          <Fade left>
+            <img src={playerImg} alt="" />
+          </Fade>
         </div>
       </main>
       <p><img src={arrowDown} alt="" />Scroll Down</p>
