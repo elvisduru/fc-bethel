@@ -147,3 +147,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Montserrat", sans-serif;
 }
+
+.active {
+  color: #e06164;
+  border-bottom: 2px solid #e06164;
+  padding-bottom: 5px;
+}
