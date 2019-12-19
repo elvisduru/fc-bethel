@@ -1,0 +1,13 @@
+.Gallery {
+  padding: 0 100px;
+}
+
+.Gallery > main {
+  padding: 30px;
+}
+
+.Gallery h2 {
+  font-weight: 900;
+  font-size: 24px;
+  margin-bottom: 30px;
+}

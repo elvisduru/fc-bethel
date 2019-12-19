@@ -1,0 +1,37 @@
+.Menu {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.Menu > a {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.Menu > a img {
+  width: 80px;
+  margin-right: 10px;
+}
+
+.Menu > ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav li {
+  margin: 0 20px;
+  font-size: 14px;
+}
