@@ -18,6 +18,10 @@
   margin-left: 15px;
 }
 
+.Players h2:last-child {
+  margin-top: 40px;
+}
+
 .modal {
   position: fixed;
   top: 0;

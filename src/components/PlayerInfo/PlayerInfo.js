@@ -19,64 +19,75 @@ export const PlayerInfo = ({
   assists,
   goals,
   matches,
-  qualities
+  qualities,
+  bio
 }) => {
-  return (
-    <div className={styles.PlayerInfo}>
-      <div className={styles.top}>
-        <div className={styles.left}>
-          <figure>{number < 10 ? "0" + number : number}</figure>
-          <h4>{name}</h4>
-          <Divider />
-          <p>{position}</p>
-          <img src={nationality === "Ghanaian" ? flagGH : flagNG} alt="" />
+  if (bio) {
+    return (
+      <div className={styles.staffInfo}>
+        <img src={image} alt="" />
+        {bio}
+      </div>
+    )
+  } else {
+    return (
+      <div className={styles.PlayerInfo}>
+        <div className={styles.top}>
+          <div className={styles.left}>
+            <figure>{number < 10 ? "0" + number : number}</figure>
+            <h4>{name}</h4>
+            <Divider />
+            <p>{position}</p>
+            <img src={nationality === "Ghanaian" ? flagGH : flagNG} alt="" />
+          </div>
+          <div className={styles.center}>
+            <img src={image} alt="" />
+          </div>
+          <div className={styles.right}>
+            <h6>Name</h6>
+            <p>{name}</p>
+            <Divider />
+            <h6>Height</h6>
+            <p>{height} ft</p>
+            <Divider />
+            <h6>Weight</h6>
+            <p>{weight} kg</p>
+            <Divider />
+            <h6>Date of birth</h6>
+            <p>{dob}</p>
+            <Divider />
+            <h6>Club</h6>
+            <p>{club}</p>
+          </div>
         </div>
-        <div className={styles.center}>
-          <img src={image} alt="" />
-        </div>
-        <div className={styles.right}>
-          <h6>Name</h6>
-          <p>{name}</p>
-          <Divider />
-          <h6>Height</h6>
-          <p>{height} ft</p>
-          <Divider />
-          <h6>Weight</h6>
-          <p>{weight} kg</p>
-          <Divider />
-          <h6>Date of birth</h6>
-          <p>{dob}</p>
-          <Divider />
-          <h6>Club</h6>
-          <p>{club}</p>
+        <div className={styles.bottom}>
+          <div>
+            <h6>Total Games</h6>
+            <p>{matches}</p>
+          </div>
+          <div>
+            <h6>{position === "Goalkeeper" ? "Clean Sheets" : "Total Goals"}</h6>
+            <p>{goals}</p>
+          </div>
+          <div>
+            <h6>Total Assists</h6>
+            <p>{assists}</p>
+          </div>
+          <div>
+            <h6>Qualities</h6>
+            <ul>
+              {qualities.map((quality, index) => (
+                <li key={index}>{quality}</li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h6>Current League</h6>
+            <img src={leagueImg} alt="" />
+          </div>
         </div>
       </div>
-      <div className={styles.bottom}>
-        <div>
-          <h6>Total Games</h6>
-          <p>{matches}</p>
-        </div>
-        <div>
-          <h6>{position === "Goalkeeper" ? "Clean Sheets" : "Total Goals"}</h6>
-          <p>{goals}</p>
-        </div>
-        <div>
-          <h6>Total Assists</h6>
-          <p>{assists}</p>
-        </div>
-        <div>
-          <h6>Qualities</h6>
-          <ul>
-            {qualities.map((quality, index) => (
-              <li key={index}>{quality}</li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h6>Current League</h6>
-          <img src={leagueImg} alt="" />
-        </div>
-      </div>
-    </div>
-  );
+    );
+  }
+
 };

@@ -50,12 +50,22 @@ const Gallery = () => {
 
   const photos = [
     {
-      src: img1,
+      src: img28,
       width: 1,
       height: 1
     },
     {
-      src: img2,
+      src: img17,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img6,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img1,
       width: 1,
       height: 1
     },
@@ -71,11 +81,6 @@ const Gallery = () => {
     },
     {
       src: img5,
-      width: 1,
-      height: 1
-    },
-    {
-      src: img6,
       width: 1,
       height: 1
     },
@@ -130,11 +135,6 @@ const Gallery = () => {
       height: 1
     },
     {
-      src: img17,
-      width: 1,
-      height: 1
-    },
-    {
       src: img18,
       width: 1,
       height: 1
@@ -185,7 +185,7 @@ const Gallery = () => {
       height: 1
     },
     {
-      src: img28,
+      src: img2,
       width: 1,
       height: 1
     },
