@@ -68,7 +68,7 @@ class Menu extends Component {
     ) : null;
 
     return (
-      <nav className={styles.Menu} style={{ color: this.props.color, backgroundColor: this.props.bgColor, zIndex: `${this.props.location.pathname === "/" ? 101 : 1}` }}>
+      <nav className={styles.Menu} style={{ color: this.props.color, backgroundColor: this.props.bgColor, zIndex: `${this.props.location.pathname === "/" || this.props.location.pathname === "/contact" ? 101 : 1}` }}>
         <Link to="/">
           <img src={logo} alt="" />
           <p>FC BETHEL <br /> INTERNATIONAL</p>
