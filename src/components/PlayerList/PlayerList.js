@@ -5,7 +5,7 @@ import { PlayerCard } from './PlayerCard/PlayerCard';
 export const PlayerList = ({ staff, players, title, findPlayer, setUser }) => {
   return (
     <div className={styles.PlayerList}>
-      <h3>{title}</h3>
+      {title ? <h3>{title}</h3> : null}
       <div>
         {players ? players.map(({ name, image, number }, index) => (
           <PlayerCard name={name} image={image} number={number} key={index} findPlayer={findPlayer} setUser={setUser} />

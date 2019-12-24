@@ -40,7 +40,7 @@
   z-index: -1;
 }
 
-.staffInfo > img {
+.staffInfo > div > img {
   float: left;
   width: 240px;
   height: 240px;
@@ -51,7 +51,7 @@
   margin-right: 20px;
 }
 
-.staffInfo > div p {
+.staffInfo > div > div p {
   margin-bottom: 15px;
   line-height: 22px;
 }
@@ -182,4 +182,79 @@
   margin-bottom: 4px;
   text-align: center;
   border-top: 1px dotted rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .PlayerInfo {
+    overflow-y: scroll;
+  }
+
+  .top {
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center {
+    order: 0;
+    width: 90%;
+    height: 200px;
+  }
+
+  .left,
+  .right {
+    order: 1;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .left > img {
+    width: 24px;
+  }
+
+  .left figure {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .left h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .right {
+    margin-top: 20px;
+  }
+
+  .right h6 {
+    margin-bottom: 10px;
+  }
+
+  .bottom {
+    order: 2;
+    flex-wrap: wrap;
+    margin: 15px 0;
+  }
+
+  .bottom > div {
+    max-width: 50%;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+  }
+
+  .staffInfo {
+    padding: 15px;
+  }
+
+  .staffInfo > div {
+    overflow-y: scroll;
+    height: 100%;
+  }
+
+  .staffInfo > div > img {
+    margin: 20px;
+    margin-top: 0;
+  }
 }

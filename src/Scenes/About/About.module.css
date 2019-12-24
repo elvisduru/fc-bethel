@@ -64,3 +64,68 @@
   width: 40px;
   margin-left: 10px;
 }
+
+@media (max-width: 768px) {
+  .About {
+    padding: 0;
+  }
+
+  .About > main {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+
+  .left {
+    padding-right: 0;
+  }
+
+  .left p:first-of-type {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  .left p:last-of-type {
+    font-size: 13px;
+    line-height: 20px;
+    padding-right: 0;
+  }
+
+  .right {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .right img {
+    width: 250px;
+  }
+
+  .right p svg {
+    width: 24px;
+  }
+
+  .right p {
+    font-size: 14px;
+  }
+
+  .right p:first-of-type {
+    bottom: 5%;
+    left: 5%;
+  }
+
+  .right p:last-of-type {
+    top: 12%;
+    right: 0;
+  }
+
+  .right p:nth-of-type(2) {
+    top: 20%;
+    left: 0;
+  }
+}

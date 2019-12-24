@@ -25,8 +25,10 @@ export const PlayerInfo = ({
   if (bio) {
     return (
       <div className={styles.staffInfo}>
-        <img src={image} alt="" />
-        {bio}
+        <div>
+          <img src={image} alt="" />
+          {bio}
+        </div>
       </div>
     )
   } else {
@@ -59,8 +61,34 @@ export const PlayerInfo = ({
             <h6>Club</h6>
             <p>{club}</p>
           </div>
+          {window.innerWidth < 768 ? <div className={styles.bottom}>
+            <div>
+              <h6>Total Games</h6>
+              <p>{matches}</p>
+            </div>
+            <div>
+              <h6>{position === "Goalkeeper" ? "Clean Sheets" : "Total Goals"}</h6>
+              <p>{goals}</p>
+            </div>
+            <div>
+              <h6>Total Assists</h6>
+              <p>{assists}</p>
+            </div>
+            <div>
+              <h6>Qualities</h6>
+              <ul>
+                {qualities.map((quality, index) => (
+                  <li key={index}>{quality}</li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h6>Current League</h6>
+              <img src={leagueImg} alt="" />
+            </div>
+          </div> : null}
         </div>
-        <div className={styles.bottom}>
+        {window.innerWidth > 768 ? <div className={styles.bottom}>
           <div>
             <h6>Total Games</h6>
             <p>{matches}</p>
@@ -85,7 +113,7 @@ export const PlayerInfo = ({
             <h6>Current League</h6>
             <img src={leagueImg} alt="" />
           </div>
-        </div>
+        </div> : null}
       </div>
     );
   }

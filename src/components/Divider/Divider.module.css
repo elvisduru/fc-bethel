@@ -35,3 +35,9 @@
   height: 2px;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .Divider {
+    margin: 10px 0;
+  }
+}

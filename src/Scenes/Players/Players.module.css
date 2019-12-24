@@ -47,3 +47,25 @@
   background-color: #dfe3e8;
   z-index: 3;
 }
+
+@media (max-width: 768px) {
+  .Players {
+    padding: 0;
+  }
+
+  .Players > main {
+    padding: 0 20px;
+    margin-top: 50px;
+    flex-direction: column;
+  }
+
+  .Players h2 {
+    font-size: 20px;
+  }
+
+  .content {
+    width: 90%;
+    height: 400px;
+    margin-top: 150px;
+  }
+}

@@ -14,9 +14,9 @@ export default class Contact extends Component {
             <Slide left>
               <div className={styles.address}>
                 <p className={styles.addressItem}>
-                  FC BETHEL INTERNATIONAL <br /><br /> NIGERIA <br /> No. 100 Future Road <br /> #23-01,02,03 <br /> 123 Center Lagos 012334 <br /> Tel: +12 3456-3222
+                  FC BETHEL INTERNATIONAL <br /><br /> HEADQUATERS <br /> 3rd Floor Brassar's Place <br /> 16 Victoria Arobieke Street, <br /> Off Admiralty Way, <br /> Lekki Phase 1, Lagos. <br /> Nigeria.
               </p>
-                <p className={styles.addressItem}>ENGLAND <br /> London 1 street <br /> 02-100 Kentucky Lane <br /> Redwood <br /> Tel: +23 3-6300-2480</p>
+                <p className={styles.addressItem}>Phone / Email <br /> +234 810 776 3821 <br /> 01 4537 121 <br /> info@uniquebiotechnology.com</p>
               </div>
             </Slide>
           </div>

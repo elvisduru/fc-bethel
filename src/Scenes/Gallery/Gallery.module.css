@@ -11,3 +11,15 @@
   font-size: 24px;
   margin-bottom: 30px;
 }
+
+@media (max-width: 768px) {
+  .Gallery {
+    padding: 0;
+  }
+
+  .Gallery > main {
+    padding: 0 20px;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
