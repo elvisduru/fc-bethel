@@ -32,6 +32,38 @@ import img25 from '../../images/gallery/img_25.jpeg';
 import img26 from '../../images/gallery/img_26.jpeg';
 import img27 from '../../images/gallery/img_27.jpeg';
 import img28 from '../../images/gallery/img_28.jpeg';
+import img29 from '../../images/gallery/img_29.jpeg';
+import img30 from '../../images/gallery/img_30.jpeg';
+import img31 from '../../images/gallery/img_31.jpeg';
+import img32 from '../../images/gallery/img_32.jpeg';
+import img33 from '../../images/gallery/img_33.jpeg';
+import img34 from '../../images/gallery/img_34.jpeg';
+import img35 from '../../images/gallery/img_35.jpeg';
+import img36 from '../../images/gallery/img_36.jpeg';
+import img37 from '../../images/gallery/img_37.jpeg';
+import img38 from '../../images/gallery/img_38.jpeg';
+import img39 from '../../images/gallery/img_39.jpeg';
+import img40 from '../../images/gallery/img_40.jpeg';
+import img41 from '../../images/gallery/img_41.jpeg';
+import img42 from '../../images/gallery/img_42.jpeg';
+import img43 from '../../images/gallery/img_43.jpeg';
+import img44 from '../../images/gallery/img_44.jpeg';
+import img45 from '../../images/gallery/img_45.jpeg';
+import img46 from '../../images/gallery/img_46.jpeg';
+import img47 from '../../images/gallery/img_47.jpeg';
+import img48 from '../../images/gallery/img_48.jpeg';
+import img49 from '../../images/gallery/img_49.jpeg';
+import img50 from '../../images/gallery/img_50.jpeg';
+import img51 from '../../images/gallery/img_51.jpeg';
+import img52 from '../../images/gallery/img_52.jpeg';
+import img53 from '../../images/gallery/img_53.jpeg';
+import img54 from '../../images/gallery/img_54.jpeg';
+import img55 from '../../images/gallery/img_55.jpeg';
+import img56 from '../../images/gallery/img_56.jpeg';
+import img57 from '../../images/gallery/img_57.jpeg';
+import img58 from '../../images/gallery/img_58.jpeg';
+import img59 from '../../images/gallery/img_59.jpeg';
+import img60 from '../../images/gallery/img_60.jpeg';
 import Menu from '../../containers/Menu/Menu';
 
 const Gallery = () => {
@@ -61,6 +93,166 @@ const Gallery = () => {
     },
     {
       src: img6,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img29,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img30,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img31,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img32,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img33,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img34,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img35,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img36,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img37,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img38,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img39,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img40,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img41,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img42,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img43,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img44,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img45,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img46,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img47,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img48,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img49,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img50,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img51,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img52,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img53,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img54,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img55,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img56,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img57,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img58,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img59,
+      width: 1,
+      height: 1
+    },
+    {
+      src: img60,
       width: 1,
       height: 1
     },
