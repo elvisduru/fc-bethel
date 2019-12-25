@@ -73,6 +73,12 @@
   animation: point 0.8s ease-out infinite alternate;
 }
 
+@media (min-width: 768px) {
+  .right > img {
+    width: 410px;
+  }
+}
+
 @keyframes point {
   0% {
     transform: translateY(-3px);

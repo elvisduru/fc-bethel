@@ -5,7 +5,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import { Fade } from "react-reveal";
 
-import playerImg from '../../images/player2.png';
+import playerImg from '../../images/player3.png';
 import arrowDown from '../../images/arrow-down.svg';
 
 const Home = (props) => {
