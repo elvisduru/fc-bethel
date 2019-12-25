@@ -6,7 +6,6 @@ import { Slide } from 'react-reveal';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 
 import logo from '../../images/logo.png';
-import logoWhite from '../../images/logo2.png';
 
 import facebook from '../../images/Facebook-white.svg';
 import twitter from '../../images/Twitter-white.svg';
@@ -47,19 +46,19 @@ class Menu extends Component {
               <li><Link to="/contact">contact</Link></li>
             </ul>
             <div className={styles.social}>
-              <a href="https://www.facebook.com/uniquebiotechnology.westafrica">
+              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
                 <img src={facebook} alt="" />
               </a>
-              <a href="https://www.twitter.com/uniquebiotechwa">
+              <a href="https://www.twitter.com/fc_bethel">
                 <img src={twitter} alt="" />
               </a>
-              <a href="https://www.instagram.com/uniquebiotechnologywa">
+              <a href="https://www.instagram.com/fc___bethel_international">
                 <img src={instagram} alt="" />
               </a>
-              <a href="https://www.linkedin.com/company/unique-biotechnology-west-africa-limited/">
+              <a href="#">
                 <img src={linkedin} alt="" />
               </a>
-              <a href="https://www.pinterest.com/uniquebiotechnologywestafrica/">
+              <a href="#">
                 <img src={pinterest} alt="" />
               </a>
             </div>
@@ -71,7 +70,7 @@ class Menu extends Component {
     return (
       <nav className={styles.Menu} style={{ color: this.props.color, backgroundColor: this.props.bgColor, zIndex: `${this.props.location.pathname === "/" || this.props.location.pathname === "/contact" ? 101 : 1}` }}>
         <Link to="/">
-          <img src={this.props.location.pathname === "/" ? logoWhite : logo} alt="" />
+          <img src={logo} alt="" />
           <p>FC BETHEL <br /> INTERNATIONAL</p>
         </Link>
         {window.innerWidth > 768 ? (
@@ -87,19 +86,19 @@ class Menu extends Component {
               <li><NavLink to="/contact">contact</NavLink></li>
             </ul>
             <div className={styles.social}>
-              <a href="https://www.facebook.com/uniquebiotechnology.westafrica">
+              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
                 <img src={this.props.location.pathname === "/" ? facebook : facebookDark} alt="" />
               </a>
-              <a href="https://www.twitter.com/uniquebiotechwa">
+              <a href="https://www.twitter.com/fc_bethel">
                 <img src={this.props.location.pathname === "/" ? twitter : twitterDark} alt="" />
               </a>
-              <a href="https://www.instagram.com/uniquebiotechnologywa">
+              <a href="https://www.instagram.com/fc___bethel_international">
                 <img src={this.props.location.pathname === "/" ? instagram : instagramDark} alt="" />
               </a>
-              <a href="https://www.linkedin.com/company/unique-biotechnology-west-africa-limited/">
+              <a href="#">
                 <img src={this.props.location.pathname === "/" ? linkedin : linkedinDark} alt="" />
               </a>
-              <a href="https://www.pinterest.com/uniquebiotechnologywestafrica/">
+              <a href="#">
                 <img src={this.props.location.pathname === "/" ? pinterest : pinterestDark} alt="" />
               </a>
             </div>
