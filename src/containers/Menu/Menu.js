@@ -6,6 +6,7 @@ import { Slide } from 'react-reveal';
 import { NavLink, Link, withRouter } from 'react-router-dom';
 
 import logo from '../../images/logo.png';
+import logoWhite from '../../images/logo2.png';
 
 import facebook from '../../images/Facebook-white.svg';
 import twitter from '../../images/Twitter-white.svg';
@@ -70,7 +71,7 @@ class Menu extends Component {
     return (
       <nav className={styles.Menu} style={{ color: this.props.color, backgroundColor: this.props.bgColor, zIndex: `${this.props.location.pathname === "/" || this.props.location.pathname === "/contact" ? 101 : 1}` }}>
         <Link to="/">
-          <img src={logo} alt="" />
+          <img src={this.props.location.pathname === "/" ? logoWhite : logo} alt="" />
           <p>FC BETHEL <br /> INTERNATIONAL</p>
         </Link>
         {window.innerWidth > 768 ? (
