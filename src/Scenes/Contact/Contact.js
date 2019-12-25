@@ -16,7 +16,7 @@ export default class Contact extends Component {
                 <p className={styles.addressItem}>
                   FC BETHEL INTERNATIONAL <br /><br /> HEADQUATERS <br /> 3rd Floor Brassar's Place <br /> 16 Victoria Arobieke Street, <br /> Off Admiralty Way, <br /> Lekki Phase 1, Lagos. <br /> Nigeria.
               </p>
-                <p className={styles.addressItem}>Phone / Email <br /> +234 810 776 3821 <br /> 01 4537 121 <br /> info@uniquebiotechnology.com</p>
+                <p className={styles.addressItem}>Phone / Email <br /> +234 810 776 3821 <br /> 01 4537 121 <br /> info@fcbethelinternational.com</p>
               </div>
             </Slide>
           </div>
