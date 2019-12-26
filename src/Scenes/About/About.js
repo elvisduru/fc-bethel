@@ -6,69 +6,14 @@ import { Fade, Zoom } from 'react-reveal';
 
 import ballImg from '../../images/ball.jpg';
 
+import arrowLeft from '../../images/arrow-left.svg';
+import arrowRight from '../../images/arrow-right.svg';
+
 export const About = (props) => {
-  useEffect(() => {
-    window.addEventListener("touchstart", startTouch, false);
-    window.addEventListener("touchmove", moveTouch, false);
-
-    // Swipe Up / Down / Left / Right
-    var initialX = null;
-    var initialY = null;
-
-    function startTouch(e) {
-      initialX = e.touches[0].clientX;
-      initialY = e.touches[0].clientY;
-    };
-
-    function moveTouch(e) {
-      if (initialX === null) {
-        return;
-      }
-
-      if (initialY === null) {
-        return;
-      }
-
-      var currentX = e.touches[0].clientX;
-      var currentY = e.touches[0].clientY;
-
-      var diffX = initialX - currentX;
-      var diffY = initialY - currentY;
-
-      if (Math.abs(diffX) > Math.abs(diffY)) {
-        // sliding horizontally
-        if (diffX > 0) {
-          // swiped left
-          console.log("swiped left");
-        } else {
-          // swiped right
-          console.log("swiped right");
-        }
-      } else {
-        // sliding vertically
-        if (diffY > 0) {
-          // swiped up
-          console.log("swiped up");
-          props.history.push('/players')
-        } else {
-          // swiped down
-          console.log("swiped down");
-          props.history.push('/')
-        }
-      }
-
-      initialX = null;
-      initialY = null;
-
-    };
-    return () => {
-      window.removeEventListener("touchstart", startTouch, false);
-      window.removeEventListener("touchmove", moveTouch, false);
-    };
-  })
   return (
     <div className={styles.About}>
-      <Menu color="#000" />
+      <Menu color="#000" bgColor="#fff" />
+      <p onClick={() => props.history.push('/')}><img src={arrowLeft} alt="" />home</p>
       <main>
         <div className={styles.left}>
           <Fade bottom cascade duration={800}>
@@ -115,6 +60,7 @@ export const About = (props) => {
           </Zoom>
         </div>
       </main>
+      <p onClick={() => props.history.push('/players')}>our players<img src={arrowRight} alt="" /></p>
     </div>
   );
 };

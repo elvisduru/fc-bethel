@@ -66,7 +66,10 @@ import img59 from '../../images/gallery/img_59.jpeg';
 import img60 from '../../images/gallery/img_60.jpeg';
 import Menu from '../../containers/Menu/Menu';
 
-const Gallery = () => {
+import arrowLeft from '../../images/arrow-left.svg';
+import arrowRight from '../../images/arrow-right.svg';
+
+const Gallery = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
 
@@ -387,6 +390,7 @@ const Gallery = () => {
   return (
     <div className={styles.Gallery}>
       <Menu color="#000" bgColor="#fff" />
+      <p onClick={() => props.history.push('/partners')}><img src={arrowLeft} alt="" />partners</p>
       <main>
         <h2>Gallery</h2>
         <div className={styles.content}>
@@ -409,6 +413,7 @@ const Gallery = () => {
           </ModalGateway>
         </div>
       </main>
+      <p onClick={() => props.history.push('/contact')}>contact<img src={arrowRight} alt="" /></p>
     </div>
   )
 }

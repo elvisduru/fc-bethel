@@ -8,6 +8,65 @@
   flex-direction: column;
 }
 
+.Players > p {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+@media (min-width: 768px) {
+  .Players > p {
+    position: fixed;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+  }
+
+  .Players > p:first-of-type {
+    left: 10px;
+  }
+
+  .Players > p:last-of-type {
+    right: 10px;
+  }
+}
+
+.Players > p img {
+  width: 10px;
+}
+
+.Players > p:first-of-type img {
+  animation: pointLeft 0.8s ease-out infinite alternate;
+  margin-right: 8px;
+}
+
+.Players > p:last-of-type img {
+  animation: pointLeft 0.8s ease-out infinite alternate;
+  margin-left: 8px;
+}
+
+@keyframes pointLeft {
+  0% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes pointRight {
+  0% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-3px);
+  }
+}
+
 .Players h2 {
   font-weight: 900;
   font-size: 24px;
@@ -55,8 +114,17 @@
 
   .Players > main {
     padding: 0 20px;
-    margin-top: 50px;
+    margin-top: 20px;
     flex-direction: column;
+  }
+
+  .Players > p {
+    margin: 0 auto;
+    width: 70px;
+  }
+
+  .Players > p:first-of-type {
+    margin-top: 10px;
   }
 
   .Players h2 {

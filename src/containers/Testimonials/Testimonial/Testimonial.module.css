@@ -21,3 +21,15 @@
   margin-top: 20px;
   font-style: normal;
 }
+
+@media (max-width: 768px) {
+  .Testimonial {
+    font-size: 18px;
+    line-height: 22px;
+    padding-right: 10px;
+  }
+
+  .Testimonial p span {
+    font-size: 40px;
+  }
+}

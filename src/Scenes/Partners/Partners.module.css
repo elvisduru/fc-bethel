@@ -6,6 +6,65 @@
   padding: 30px;
 }
 
+.Partners > p {
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+@media (min-width: 768px) {
+  .Partners > p {
+    position: fixed;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    writing-mode: vertical-lr;
+  }
+
+  .Partners > p:first-of-type {
+    left: 10px;
+  }
+
+  .Partners > p:last-of-type {
+    right: 10px;
+  }
+}
+
+.Partners > p img {
+  width: 10px;
+}
+
+.Partners > p:first-of-type img {
+  animation: pointLeft 0.8s ease-out infinite alternate;
+  margin-right: 8px;
+}
+
+.Partners > p:last-of-type img {
+  animation: pointLeft 0.8s ease-out infinite alternate;
+  margin-left: 8px;
+}
+
+@keyframes pointLeft {
+  0% {
+    transform: translateX(-3px);
+  }
+  100% {
+    transform: translateX(3px);
+  }
+}
+
+@keyframes pointRight {
+  0% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-3px);
+  }
+}
+
 .Partners h2 {
   font-weight: 900;
   font-size: 24px;
@@ -21,4 +80,28 @@
 
 .Partners main > img {
   width: 95%;
+}
+
+@media (max-width: 768px) {
+  .Partners {
+    padding: 0;
+  }
+
+  .Partners > p {
+    margin: 0 auto;
+    width: 80px;
+  }
+
+  .Partners > p:first-of-type {
+    margin-top: 10px;
+  }
+
+  .Partners > main {
+    padding: 0 20px;
+    margin-top: 20px;
+  }
+
+  .Partners hr {
+    margin: 50px 0;
+  }
 }
