@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './Partners.module.css';
 import Menu from '../../containers/Menu/Menu';
 import Testimonials from '../../containers/Testimonials/Testimonials';
@@ -8,6 +8,9 @@ import arrowLeft from '../../images/arrow-left.svg';
 import arrowRight from '../../images/arrow-right.svg';
 
 export const Partners = (props) => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={styles.Partners}>
       <Menu color="#000" bgColor="#fff" />
