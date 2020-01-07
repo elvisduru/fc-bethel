@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import styles from './Contact.module.css';
 import Menu from '../../containers/Menu/Menu';
 
+import { Footer } from '../../components/Footer/Footer';
+
 import { Slide } from 'react-reveal';
 
 export default class Contact extends Component {
   render() {
     return (
       <div className={styles.Contact}>
-        <Menu color="#000" />
+        <Menu color="#000" bgColor="#fff" />
         <section className={styles.formWrapper}>
           <div className={styles.imgWrapperLeft}>
             <Slide left>
@@ -54,6 +56,7 @@ export default class Contact extends Component {
             </Slide>
           </form>
         </section>
+        <Footer />
       </div>
     )
   }

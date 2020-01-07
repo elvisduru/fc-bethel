@@ -11,13 +11,13 @@ import facebook from '../../images/Facebook-white.svg';
 import twitter from '../../images/Twitter-white.svg';
 import instagram from '../../images/instagram-white.svg';
 import linkedin from '../../images/linkedin-white.svg';
-import pinterest from '../../images/pinterest-white.svg';
+import youtube from '../../images/youtube-white.svg';
 
 import facebookDark from '../../images/Facebook.svg';
 import twitterDark from '../../images/Twitter.svg';
 import instagramDark from '../../images/Instagram.svg';
 import linkedinDark from '../../images/linkedin.svg';
-import pinterestDark from '../../images/pinterest.svg';
+import youtubeDark from '../../images/youtube.svg';
 
 class Menu extends Component {
   state = {
@@ -59,7 +59,7 @@ class Menu extends Component {
                 <img src={linkedin} alt="" />
               </a>
               <a href="#">
-                <img src={pinterest} alt="" />
+                <img src={youtube} alt="" />
               </a>
             </div>
           </div>
@@ -99,7 +99,7 @@ class Menu extends Component {
                 <img src={this.props.location.pathname === "/" ? linkedin : linkedinDark} alt="" />
               </a>
               <a href="#">
-                <img src={this.props.location.pathname === "/" ? pinterest : pinterestDark} alt="" />
+                <img src={this.props.location.pathname === "/" ? youtube : youtubeDark} alt="" />
               </a>
             </div>
           </>
