@@ -8,6 +8,10 @@ import { Partners } from "./Scenes/Partners/Partners";
 import { Players } from "./Scenes/Players/Players";
 import Gallery from "./Scenes/Gallery/Gallery";
 
+import udoh from './images/players/udoh.jpg';
+import seyi from './images/players/seyi.jpg';
+import ikhide from './images/players/ikhide.jpg';
+
 import jimoh from "./images/players/jimoh.jpg";
 import daniel from "./images/players/daniel.jpg";
 import obinna from "./images/players/obinna.jpg";
@@ -41,6 +45,7 @@ class App extends Component {
           {
             name: "Udoh Andy Benedict",
             position: null,
+            image: udoh,
             bio: (
               <div>
                 <p>
@@ -58,6 +63,7 @@ class App extends Component {
           {
             name: "Olagunju Nathaniel Ikhide",
             position: "Head Coach",
+            image: ikhide,
             bio: (
               <div>
                 <p>
@@ -74,6 +80,7 @@ class App extends Component {
           },
           {
             name: "Seyi Jones",
+            image: seyi,
             position: "Team Manager",
             bio: (
               <div>

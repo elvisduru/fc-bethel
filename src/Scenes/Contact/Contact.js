@@ -26,7 +26,7 @@ export default class Contact extends Component {
             <Slide right cascade>
               <div>
                 <h1>Contact Us</h1>
-                <p>WHAT DO YOU WANT TO CONTACT US ABOUT ?</p>
+                <p>WHAT WOULD YOU LIKE TO TELL US ?</p>
                 <label htmlFor="name">
                   <p>
                     NAME
