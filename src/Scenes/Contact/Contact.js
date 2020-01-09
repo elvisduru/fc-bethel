@@ -7,6 +7,9 @@ import { Footer } from '../../components/Footer/Footer';
 import { Slide } from 'react-reveal';
 
 export default class Contact extends Component {
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
   render() {
     return (
       <div className={styles.Contact}>

@@ -185,6 +185,10 @@
   margin-bottom: 20px;
 }
 
+.joinUsContent .form textarea {
+  height: 60px;
+}
+
 .joinUsContent .form button {
   align-self: center;
   width: 200px;
