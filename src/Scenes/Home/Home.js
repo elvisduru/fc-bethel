@@ -19,6 +19,8 @@ const Home = (props) => {
             <p>Football made easy with our exceptional teaching methods and development program.</p>
             <Link to="/about">LEARN MORE</Link>
           </Fade>
+          <p onClick={() => props.history.push('/about')}>about us<img src={arrowRight} alt="" /></p>
+
         </div>
         <div className={styles.right}>
           <Fade left>
@@ -26,7 +28,6 @@ const Home = (props) => {
           </Fade>
         </div>
       </main>
-      <p onClick={() => props.history.push('/about')}>about us<img src={arrowRight} alt="" /></p>
     </div>
   )
 }

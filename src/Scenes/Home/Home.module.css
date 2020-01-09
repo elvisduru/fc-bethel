@@ -1,6 +1,6 @@
 .Home {
   /* width: 100vw; */
-  /* height: 100vh; */
+  height: 100vh;
   background: #608fbe;
   background-image: url("../../images/stadium.jpg");
   background-size: cover;
@@ -60,15 +60,16 @@
   border-radius: 50px;
 }
 
-.Home > p {
+.Home .left > p {
   font-size: 12px;
   display: flex;
   align-items: center;
   padding: 10px 0;
   cursor: pointer;
+  margin-top: 70px;
 }
 
-.Home > p img {
+.Home .left > p img {
   margin-left: 8px;
   width: 12px;
   animation: point 0.8s ease-out infinite alternate;
@@ -100,9 +101,8 @@
     padding: 0 20px;
   }
 
-  .Home > p {
-    margin-top: 130px;
-    margin-left: 20px;
+  .Home .left > p {
+    margin-top: 60px;
   }
 
   .left {
