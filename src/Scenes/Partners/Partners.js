@@ -107,7 +107,7 @@ export class Partners extends Component {
           </div>
           {joinUsForm}
         </main>
-        <p onClick={() => this.props.history.push('/gallery')}>gallery<img src={arrowRight} alt="" /></p>
+        <p onClick={() => this.props.history.push('/news')}>news<img src={arrowRight} alt="" /></p>
       </div >
     )
   }

@@ -69,6 +69,8 @@ import Menu from '../../containers/Menu/Menu';
 import arrowLeft from '../../images/arrow-left.svg';
 import arrowRight from '../../images/arrow-right.svg';
 
+// import jonB from "../../videos/the_good_in_me.mp4"
+
 const Gallery = (props) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
@@ -390,7 +392,7 @@ const Gallery = (props) => {
   return (
     <div className={styles.Gallery}>
       <Menu color="#000" bgColor="#fff" />
-      <p onClick={() => props.history.push('/partners')}><img src={arrowLeft} alt="" />partners</p>
+      <p onClick={() => props.history.push('/news')}><img src={arrowLeft} alt="" />news</p>
       <main>
         <h2>Gallery</h2>
         <div className={styles.content}>

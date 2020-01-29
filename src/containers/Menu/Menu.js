@@ -41,7 +41,7 @@ class Menu extends Component {
               <li><Link to="/players">our players</Link></li>
               {/* <li><Link to="/staff">our staff</Link></li> */}
               <li><Link to="/partners">partners</Link></li>
-              {/* <li><Link to="/news">news</Link></li> */}
+              <li><Link to="/news">news</Link></li>
               <li><Link to="/gallery">gallery</Link></li>
               <li><Link to="/contact">contact</Link></li>
             </ul>
@@ -81,33 +81,33 @@ class Menu extends Component {
               <li><NavLink to="/players">our players</NavLink></li>
               {/* <li><NavLink to="/staff">our staff</NavLink></li> */}
               <li><NavLink to="/partners">partners</NavLink></li>
-              {/* <li><NavLink to="/news">news</NavLink></li> */}
+              <li><NavLink to="/news">news</NavLink></li>
               <li><NavLink to="/gallery">gallery</NavLink></li>
               <li><NavLink to="/contact">contact</NavLink></li>
             </ul>
             <div className={styles.social}>
               <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
-                <img src={this.props.location.pathname === "/" ? facebook : facebookDark} alt="" />
+                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? facebook : facebookDark} alt="" />
               </a>
               <a href="https://www.twitter.com/fc_bethel">
-                <img src={this.props.location.pathname === "/" ? twitter : twitterDark} alt="" />
+                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? twitter : twitterDark} alt="" />
               </a>
               <a href="https://www.instagram.com/fc___bethel_international">
-                <img src={this.props.location.pathname === "/" ? instagram : instagramDark} alt="" />
+                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? instagram : instagramDark} alt="" />
               </a>
               <a href="#">
-                <img src={this.props.location.pathname === "/" ? linkedin : linkedinDark} alt="" />
+                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? linkedin : linkedinDark} alt="" />
               </a>
               <a href="#">
-                <img src={this.props.location.pathname === "/" ? youtube : youtubeDark} alt="" />
+                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? youtube : youtubeDark} alt="" />
               </a>
             </div>
           </>
         ) : (
             <button onClick={this.handleOpenMenu} ref="hamburger" className={styles.hamburger}>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" ? '#fff' : '#000'}` }}></span>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" ? '#fff' : '#000'}` }}></span>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" ? '#fff' : '#000'}` }}></span>
+              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
+              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
+              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
             </button>
           )}
         {mobileMenu}

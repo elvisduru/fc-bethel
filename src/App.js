@@ -35,6 +35,7 @@ import ebube from "./images/players/ebube.jpg";
 import muhammed from "./images/players/muhammed.jpg";
 import collins from "./images/players/collins.jpg";
 import Contact from "./Scenes/Contact/Contact";
+import { News } from "./Scenes/News/News";
 
 class App extends Component {
   constructor(props) {
@@ -615,6 +616,7 @@ class App extends Component {
               <Route path="/" exact component={Home} />
               <Route path="/about" exact component={About} />
               <Route path="/partners" exact component={Partners} />
+              <Route path="/news" exact component={News} />
               <Route
                 path="/players"
                 exact

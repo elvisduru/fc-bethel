@@ -153,3 +153,18 @@ body {
   border-bottom: 2px solid #e06164;
   padding-bottom: 5px;
 }
+
+/* hide scroll bar */
+
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff0000;
+}
