@@ -18,13 +18,20 @@ export const About = (props) => {
         <div className={styles.left}>
           <Fade bottom cascade duration={800}>
             <p>
-              "Full-time professional coaching and matches led by our highly qualified UEFA coaches at the Nigeria’s leading International Football Academy."
+              FC Bethel International have worked hard to earn a reputation, both nationally and internationally, as one of
+              Nigeria’s best known and developing football academy.
             </p>
             <p>
-              FC Bethel International Football Academy is the leading private football academy in Nigeria, providing academic football courses for aspiring footballers aged 16 and up.
+              The club has and will continue to discover, nurture and designate young talented players to professional clubs
+              under FIFA jurisdictions. On the field, the club has a long history of success both within Nigeria, Africa and
+              Europe at large. With players such as Abayomi Emmanuel Adebayo, Godwin Emmanuel just to mention a few
+              now plying their football trade in the Nigerian Premier League top flight.
               <br /><br />
-              The courses we offer range from one week to three years and combine specialist football training with first-class education. The quality of the academy has seen former students succeding at professional football clubs within the UK, Europe, USA or at a significantly higher level in their home country, with many going on to represent their national teams.
+              Also, we have some players from FC Bethel International Football Academy who have broken into first team
+selection in Europe such as Dinopeter Jude Airaodion who just finished his season with Turk Ocagi Limasol in
+Cyprus.
             </p>
+            <button className={styles.link} onClick={() => props.history.push('/news/About-FC-Bethel-International2020-03-17-16:54:57')}>read more<img src={arrowRight} alt="" /></button>
           </Fade>
         </div>
         <div className={styles.right}>

@@ -16,6 +16,24 @@
   color: rgba(0, 0, 0, 0.67);
 }
 
+.About .left > button.link {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+  margin-top: 40px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.About .left > button.link img {
+  margin-left: 8px;
+  width: 12px;
+  animation: point 0.8s ease-out infinite alternate;
+}
+
 @media (min-width: 768px) {
   .About > p {
     position: fixed;

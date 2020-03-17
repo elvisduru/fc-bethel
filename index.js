@@ -27,10 +27,6 @@ app.use(express.static(path.join(__dirname, '/client/build')))
 
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')))
 
-app.get('/api', (req, res) => {
-  res.send("Lol LOl LOOOllling!!!")
-})
-
 app.get('/authenticate', auth, (req, res) => {
   const options = {
     httpOnly: true,
