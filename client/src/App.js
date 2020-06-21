@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Switch, Route, withRouter } from "react-router-dom";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import "./App.css";
 import Home from "./Scenes/Home/Home";
 import { About } from "./Scenes/About/About";
@@ -38,6 +37,8 @@ import Contact from "./Scenes/Contact/Contact";
 import { News } from "./Scenes/News/News";
 import Admin from "./Scenes/Admin/Admin";
 import { ViewPost } from "./Scenes/News/ViewPost";
+import Menu from "./containers/Menu/Menu";
+import { Footer } from "./components/Footer/Footer";
 
 class App extends Component {
   constructor(props) {
@@ -607,37 +608,31 @@ class App extends Component {
   };
 
   render() {
-    const { location } = this.props;
-    const timeout = { enter: 300, exit: 0 };
-
     return (
-      <TransitionGroup component={null}>
-        <CSSTransition key={location.key} timeout={timeout} classNames="fade">
-          <div>
-            <Switch location={location}>
-              <Route path="/" exact component={Home} />
-              <Route path="/about" exact component={About} />
-              <Route path="/partners" exact component={Partners} />
-              <Route path="/news" exact component={News} />
-              <Route path="/news/:id" exact component={ViewPost} />
-              <Route
-                path="/players"
-                exact
-                render={props => (
-                  <Players
-                    {...props}
-                    players={this.state.players}
-                    findPlayer={this.findPlayer}
-                  />
-                )}
-              />
-              <Route path="/gallery" exact component={Gallery} />
-              <Route path="/contact" exact component={Contact} />
-              <Route path="/admin" component={Admin} />
-            </Switch>
-          </div>
-        </CSSTransition>
-      </TransitionGroup>
+      <>
+        <Switch>
+          <Route path="/" exact render={() => (
+            <>
+              <Menu />
+              <main>
+                <Home />
+                <About />
+                <Partners />
+                <News />
+                <Players
+                  players={this.state.players}
+                  findPlayer={this.findPlayer}
+                />
+              </main>
+              <Footer />
+            </>
+          )} />
+          <Route path="/news/:id" exact component={ViewPost} />
+          <Route path="/gallery" exact component={Gallery} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/admin" component={Admin} />
+        </Switch>
+      </>
     );
   }
 }

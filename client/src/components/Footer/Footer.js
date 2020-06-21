@@ -46,7 +46,7 @@ export const Footer = () => {
             <img onClick={handleSubscribe} src={rightChevron} alt="" />
           </div>
         </div>
-        <p>copyright © 2019</p>
+        <p>copyright © {new Date().getFullYear()}</p>
       </div>
     </div>
   )

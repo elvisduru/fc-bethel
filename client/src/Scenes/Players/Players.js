@@ -1,23 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Players.module.css';
-import Menu from '../../containers/Menu/Menu';
 import { PlayerList } from '../../components/PlayerList/PlayerList';
 import { Fade } from 'react-reveal';
 import { PlayerInfo } from '../../components/PlayerInfo/PlayerInfo';
 
-import arrowLeft from '../../images/arrow-left.svg';
-import arrowRight from '../../images/arrow-right.svg';
-
-export const Players = ({ players, findPlayer, history }) => {
+export const Players = ({ players, findPlayer }) => {
   const [user, setUser] = useState(null);
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className={styles.Players}>
-      <Menu color="#000" bgColor="#fff" />
-      <p onClick={() => history.push('/about')}><img src={arrowLeft} alt="" />about us</p>
+    <div className={styles.Players} id="players">
       <main>
         <h2>PLAYERS</h2>
         <PlayerList players={players.goalkeepers} title="GoalKeepers" findPlayer={findPlayer} setUser={setUser} />
@@ -27,7 +21,6 @@ export const Players = ({ players, findPlayer, history }) => {
         <h2 style={{ marginTop: '50px' }}>COACHING CREW</h2>
         <PlayerList staff={players.staff} findPlayer={findPlayer} setUser={setUser} />
       </main>
-      <p onClick={() => history.push('/partners')}>partners<img src={arrowRight} alt="" /></p>
       {user ? (
         <div className={styles.modal}>
           <div className={styles.backdrop} onClick={() => setUser(null)}></div>

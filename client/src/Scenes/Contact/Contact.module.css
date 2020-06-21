@@ -33,9 +33,9 @@
   box-shadow: 2px 0px 6px rgba(0, 0, 0, 0.16);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 800px) {
   .Contact > section {
-    margin-top: 60px;
+    margin-top: 160px;
   }
 
   .imgWrapperLeft {
@@ -162,6 +162,10 @@
     background-color: #fff;
   }
 
+  .Contact > section {
+    margin-top: 80px;
+  }
+
   .left {
     display: flex;
     justify-content: center;
@@ -171,11 +175,6 @@
     width: 100px;
     border-radius: 50%;
     margin: 20px 0 0;
-  }
-
-  .nav {
-    position: relative;
-    margin-top: 20px;
   }
 
   .formWrapper {
@@ -215,5 +214,12 @@
   .imgWrapperLeft > div p {
     font-size: 16px;
     line-height: 19px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 800px) {
+  .formWrapper .form {
+    width: 500px;
+    padding: 20px 0;
   }
 }

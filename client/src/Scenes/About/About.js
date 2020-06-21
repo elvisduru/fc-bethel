@@ -1,19 +1,15 @@
 import React from "react";
 import styles from "./About.module.css";
-import Menu from "../../containers/Menu/Menu";
 
 import { Fade, Zoom } from 'react-reveal';
 
 import ballImg from '../../images/ball.jpg';
 
-import arrowLeft from '../../images/arrow-left.svg';
 import arrowRight from '../../images/arrow-right.svg';
 
-export const About = (props) => {
+export const About = () => {
   return (
-    <div className={styles.About}>
-      <Menu color="#000" bgColor="#fff" />
-      <p onClick={() => props.history.push('/')}><img src={arrowLeft} alt="" />home</p>
+    <div id="about" className={styles.About}>
       <main>
         <div className={styles.left}>
           <Fade bottom cascade duration={800}>
@@ -31,7 +27,7 @@ export const About = (props) => {
 selection in Europe such as Dinopeter Jude Airaodion who just finished his season with Turk Ocagi Limasol in
 Cyprus.
             </p>
-            <button className={styles.link} onClick={() => props.history.push('/news/About-FC-Bethel-International2020-03-17-16:54:57')}>read more<img src={arrowRight} alt="" /></button>
+            <a className={styles.link} href="/news/About-FC-Bethel-International2020-03-17-16:54:57">read more<img src={arrowRight} alt="" /></a>
           </Fade>
         </div>
         <div className={styles.right}>
@@ -64,7 +60,6 @@ Cyprus.
           </Zoom>
         </div>
       </main>
-      <p onClick={() => props.history.push('/players')}>our players<img src={arrowRight} alt="" /></p>
     </div>
   );
 };

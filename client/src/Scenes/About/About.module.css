@@ -1,10 +1,10 @@
 .About {
   padding: 0 100px;
+  padding-top: 6%;
 }
 
 .About > main {
   display: flex;
-  margin-top: 6%;
 }
 
 .About > p {
@@ -16,19 +16,19 @@
   color: rgba(0, 0, 0, 0.67);
 }
 
-.About .left > button.link {
+.About .left > a.link {
   font-size: 12px;
   display: flex;
   align-items: center;
   padding: 10px 0;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: 20px;
   background-color: transparent;
   border: none;
   outline: none;
 }
 
-.About .left > button.link img {
+.About .left > a.link img {
   margin-left: 8px;
   width: 12px;
   animation: point 0.8s ease-out infinite alternate;
@@ -108,6 +108,9 @@
 
 .right {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .right p {
@@ -118,7 +121,7 @@
 
 .right p:first-of-type {
   bottom: 12%;
-  left: -15%;
+  left: 5%;
 }
 
 .right p:last-of-type {
@@ -128,7 +131,7 @@
 
 .right p:nth-of-type(2) {
   top: 35%;
-  left: -20%;
+  left: 0%;
 }
 
 .right p:last-of-type svg {
@@ -157,9 +160,8 @@
   }
 
   .About > main {
-    padding: 0 20px;
+    padding: 60px 40px;
     flex-direction: column;
-    margin-top: 10px;
   }
 
   .left,

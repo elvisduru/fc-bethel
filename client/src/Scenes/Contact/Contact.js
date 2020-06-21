@@ -49,7 +49,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div className={styles.Contact}>
-        <Menu color="#000" bgColor="#fff" />
+        <Menu />
         <section className={styles.formWrapper}>
           <div className={styles.imgWrapperLeft}>
             <Slide left>

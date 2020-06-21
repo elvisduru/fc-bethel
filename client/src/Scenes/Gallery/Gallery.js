@@ -67,9 +67,8 @@ import img58 from '../../images/gallery/img_58.jpeg';
 import img59 from '../../images/gallery/img_59.jpeg';
 import img60 from '../../images/gallery/img_60.jpeg';
 import Menu from '../../containers/Menu/Menu';
+import { Footer } from '../../components/Footer/Footer';
 
-import arrowLeft from '../../images/arrow-left.svg';
-import arrowRight from '../../images/arrow-right.svg';
 
 // import jonB from "../../videos/the_good_in_me.mp4"
 
@@ -91,7 +90,7 @@ import arrowRight from '../../images/arrow-right.svg';
 //   );
 // };
 
-const Gallery = (props) => {
+const Gallery = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);
   const [gallery, setGallery] = useState()
@@ -424,11 +423,9 @@ const Gallery = (props) => {
     },
   ];
 
-
   return (
     <div className={styles.Gallery}>
-      <Menu color="#000" bgColor="#fff" />
-      <p onClick={() => props.history.push('/news')}><img src={arrowLeft} alt="" />news</p>
+      <Menu />
       <main>
         <h2>Gallery</h2>
         <div className={styles.content}>
@@ -454,7 +451,7 @@ const Gallery = (props) => {
           </ModalGateway>
         </div>
       </main>
-      <p onClick={() => props.history.push('/contact')}>contact<img src={arrowRight} alt="" /></p>
+      <Footer />
     </div>
   )
 }

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import styles from './Partners.module.css';
-import Menu from '../../containers/Menu/Menu';
 import Testimonials from '../../containers/Testimonials/Testimonials';
 import partnersImg from '../../images/partners.png';
 
 import axios from 'axios'
-
-import arrowLeft from '../../images/arrow-left.svg';
-import arrowRight from '../../images/arrow-right.svg';
 import { Slide, Bounce } from 'react-reveal'
 
 export class Partners extends Component {
@@ -93,9 +89,7 @@ export class Partners extends Component {
     ) : null
 
     return (
-      <div className={styles.Partners}>
-        <Menu color="#000" bgColor="#fff" />
-        <p onClick={() => this.props.history.push('/players')}><img src={arrowLeft} alt="" />our players</p>
+      <div className={styles.Partners} id="partners">
         <main>
           <h2>Testimonials</h2>
           <Testimonials />
@@ -109,7 +103,6 @@ export class Partners extends Component {
           </div>
           {joinUsForm}
         </main>
-        <p onClick={() => this.props.history.push('/news')}>news<img src={arrowRight} alt="" /></p>
       </div >
     )
   }

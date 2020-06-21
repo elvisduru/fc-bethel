@@ -3,6 +3,7 @@ import styles from './ViewPost.module.css'
 import { useParams } from 'react-router-dom';
 import axios from 'axios'
 import Menu from '../../containers/Menu/Menu';
+import { Footer } from '../../components/Footer/Footer';
 
 export const ViewPost = (props) => {
   const [post, setPost] = useState();
@@ -20,7 +21,7 @@ export const ViewPost = (props) => {
 
   return (
     <div className={styles.ViewPost}>
-      <Menu color="#000" bgColor="#fff" />
+      <Menu />
       <main>
         <div className={styles.content}>
           {post && (
@@ -36,6 +37,7 @@ export const ViewPost = (props) => {
           )}
         </div>
       </main>
+      <Footer />
     </div>
   )
 }

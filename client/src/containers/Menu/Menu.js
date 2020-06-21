@@ -13,19 +13,36 @@ import instagram from '../../images/instagram-white.svg';
 import linkedin from '../../images/linkedin-white.svg';
 import youtube from '../../images/youtube-white.svg';
 
-import facebookDark from '../../images/Facebook.svg';
-import twitterDark from '../../images/Twitter.svg';
-import instagramDark from '../../images/Instagram.svg';
-import linkedinDark from '../../images/linkedin.svg';
-import youtubeDark from '../../images/youtube.svg';
-
 class Menu extends Component {
   state = {
-    openMenu: false
+    openMenu: false,
+    background: false
   }
 
   handleOpenMenu = () => {
     this.setState(prevState => ({ openMenu: !prevState.openMenu }))
+  }
+
+  handleScroll = (e) => {
+    if (window.pageYOffset > 0) {
+      this.setState({ background: true })
+    } else {
+      this.setState({ background: false })
+    }
+  }
+
+  componentDidMount() {
+    if (this.props.location.pathname === '/') {
+      window.addEventListener('scroll', this.handleScroll)
+    } else {
+      this.setState({ background: true })
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.props.location.pathname === '/') {
+      window.removeEventListener("scroll", this.handleScroll)
+    }
   }
 
   render() {
@@ -35,13 +52,12 @@ class Menu extends Component {
           <div onClick={this.handleOpenMenu} className={styles.backdrop}></div>
           <div className={styles.content}>
             <p onClick={this.handleOpenMenu}>&times;</p>
-            <ul>
-              <li><Link to="/" >home</Link></li>
-              <li><Link to="/about">about us</Link></li>
-              <li><Link to="/players">our players</Link></li>
-              {/* <li><Link to="/staff">our staff</Link></li> */}
-              <li><Link to="/partners">partners</Link></li>
-              <li><Link to="/news">news</Link></li>
+            <ul onClick={this.handleOpenMenu}>
+              <li><a href="/">home</a></li>
+              <li><a href="/#about">about us</a></li>
+              <li><a href="/#partners">partners</a></li>
+              <li><a href="/#news">news</a></li>
+              <li><a href="/#players">our players</a></li>
               <li><Link to="/gallery">gallery</Link></li>
               <li><Link to="/contact">contact</Link></li>
             </ul>
@@ -68,7 +84,7 @@ class Menu extends Component {
     ) : null;
 
     return (
-      <nav className={styles.Menu} style={{ color: this.props.color, backgroundColor: this.props.bgColor, zIndex: `${this.props.location.pathname === "/" || this.props.location.pathname === "/contact" ? 101 : 1}` }}>
+      <nav className={`${styles.Menu} ${this.state.background && styles.background}`}>
         <Link to="/">
           <img src={logo} alt="" />
           <p>FC BETHEL <br /> INTERNATIONAL</p>
@@ -76,30 +92,29 @@ class Menu extends Component {
         {window.innerWidth > 768 ? (
           <>
             <ul className={styles.nav}>
-              <li><NavLink to="/" exact >home</NavLink></li>
-              <li><NavLink to="/about">about us</NavLink></li>
-              <li><NavLink to="/players">our players</NavLink></li>
-              {/* <li><NavLink to="/staff">our staff</NavLink></li> */}
-              <li><NavLink to="/partners">partners</NavLink></li>
-              <li><NavLink to="/news">news</NavLink></li>
+              <li><a href="/" >home</a></li>
+              <li><a href="/#about">about us</a></li>
+              <li><a href="/#partners">partners</a></li>
+              <li><a href="/#news">news</a></li>
+              <li><a href="/#players">our players</a></li>
               <li><NavLink to="/gallery">gallery</NavLink></li>
               <li><NavLink to="/contact">contact</NavLink></li>
             </ul>
             <div className={styles.social}>
               <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
-                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? facebook : facebookDark} alt="" />
+                <img src={facebook} alt="" />
               </a>
               <a href="https://www.twitter.com/fc_bethel">
-                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? twitter : twitterDark} alt="" />
+                <img src={twitter} alt="" />
               </a>
               <a href="https://www.instagram.com/fc___bethel_international">
-                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? instagram : instagramDark} alt="" />
+                <img src={instagram} alt="" />
               </a>
               <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
-                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? linkedin : linkedinDark} alt="" />
+                <img src={linkedin} alt="" />
               </a>
               <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
-                <img src={this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? youtube : youtubeDark} alt="" />
+                <img src={youtube} alt="" />
               </a>
             </div>
           </>
