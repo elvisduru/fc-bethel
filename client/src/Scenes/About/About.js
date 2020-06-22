@@ -12,7 +12,7 @@ export const About = () => {
     <div id="about" className={styles.About}>
       <main>
         <div className={styles.left}>
-          <Fade bottom cascade duration={800}>
+          <Fade bottom duration={800}>
             <p>
               FC Bethel International have worked hard to earn a reputation, both nationally and internationally, as one of
               Nigeria’s best known and developing football academy.

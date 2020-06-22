@@ -5,6 +5,7 @@ import partnersImg from '../../images/partners.png';
 
 import axios from 'axios'
 import { Slide, Bounce } from 'react-reveal'
+import LogoCarousel from '../../components/LogoCarousel/LogoCarousel';
 
 export class Partners extends Component {
   state = {
@@ -94,8 +95,8 @@ export class Partners extends Component {
           <h2>Testimonials</h2>
           <Testimonials />
           <hr />
-          <h2>Our Partners</h2>
-          <img src={partnersImg} alt="" />
+          <h2 style={{ marginBottom: '20px' }}>Our Partners</h2>
+          <LogoCarousel />
           <div className={styles.callout}>
             <h4>Become a Sponsor Today!</h4>
             <p>We are always looking forward to having backers and sponsors to join us. You can be one of us.</p>
