@@ -1,47 +1,47 @@
-import React, { Component } from 'react';
-import styles from './Menu.module.css';
+import React, { Component } from "react";
+import styles from "./Menu.module.css";
 
-import { Slide } from 'react-reveal';
+import { Slide } from "react-reveal";
 
-import { NavLink, Link, withRouter } from 'react-router-dom';
+import { NavLink, Link, withRouter } from "react-router-dom";
 
-import logo from '../../images/logo.png';
+import logo from "../../images/logo.png";
 
-import facebook from '../../images/Facebook-white.svg';
-import twitter from '../../images/Twitter-white.svg';
-import instagram from '../../images/instagram-white.svg';
-import linkedin from '../../images/linkedin-white.svg';
-import youtube from '../../images/youtube-white.svg';
+import facebook from "../../images/Facebook-white.svg";
+import twitter from "../../images/Twitter-white.svg";
+import instagram from "../../images/instagram-white.svg";
+import linkedin from "../../images/linkedin-white.svg";
+import youtube from "../../images/youtube-white.svg";
 
 class Menu extends Component {
   state = {
     openMenu: false,
-    background: false
-  }
+    background: false,
+  };
 
   handleOpenMenu = () => {
-    this.setState(prevState => ({ openMenu: !prevState.openMenu }))
-  }
+    this.setState((prevState) => ({ openMenu: !prevState.openMenu }));
+  };
 
   handleScroll = (e) => {
     if (window.pageYOffset > 0) {
-      this.setState({ background: true })
+      this.setState({ background: true });
     } else {
-      this.setState({ background: false })
+      this.setState({ background: false });
     }
-  }
+  };
 
   componentDidMount() {
-    if (this.props.location.pathname === '/') {
-      window.addEventListener('scroll', this.handleScroll)
+    if (this.props.location.pathname === "/") {
+      window.addEventListener("scroll", this.handleScroll);
     } else {
-      this.setState({ background: true })
+      this.setState({ background: true });
     }
   }
 
   componentWillUnmount() {
-    if (this.props.location.pathname === '/') {
-      window.removeEventListener("scroll", this.handleScroll)
+    if (this.props.location.pathname === "/") {
+      window.removeEventListener("scroll", this.handleScroll);
     }
   }
 
@@ -53,28 +53,62 @@ class Menu extends Component {
           <div className={styles.content}>
             <p onClick={this.handleOpenMenu}>&times;</p>
             <ul onClick={this.handleOpenMenu}>
-              <li><a href="/">home</a></li>
-              <li><a href="/#about">about us</a></li>
-              <li><a href="/#partners">partners</a></li>
-              <li><a href="/#news">news</a></li>
-              <li><a href="/#players">our players</a></li>
-              <li><Link to="/gallery">gallery</Link></li>
-              <li><Link to="/contact">contact</Link></li>
+              <li>
+                <a href="/">home</a>
+              </li>
+              <li>
+                <a href="/#about">about us</a>
+              </li>
+              <li>
+                <a href="/#partners">partners</a>
+              </li>
+              <li>
+                <a href="/#news">news</a>
+              </li>
+              <li>
+                <a href="/#players">our players</a>
+              </li>
+              <li>
+                <Link to="/gallery">gallery</Link>
+              </li>
+              <li>
+                <Link to="/contact">contact</Link>
+              </li>
             </ul>
             <div className={styles.social}>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={facebook} alt="" />
               </a>
-              <a href="https://www.twitter.com/fc_bethel">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.twitter.com/fc_bethel"
+              >
                 <img src={twitter} alt="" />
               </a>
-              <a href="https://www.instagram.com/fc___bethel_international">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/fc___bethel_international"
+              >
                 <img src={instagram} alt="" />
               </a>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={linkedin} alt="" />
               </a>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={youtube} alt="" />
               </a>
             </div>
@@ -84,50 +118,121 @@ class Menu extends Component {
     ) : null;
 
     return (
-      <nav className={`${styles.Menu} ${this.state.background && styles.background}`}>
+      <nav
+        className={`${styles.Menu} ${
+          this.state.background && styles.background
+        }`}
+      >
         <Link to="/">
           <img src={logo} alt="" />
-          <p>FC BETHEL <br /> INTERNATIONAL</p>
+          <p>
+            FC BETHEL <br /> INTERNATIONAL
+          </p>
         </Link>
         {window.innerWidth > 768 ? (
           <>
             <ul className={styles.nav}>
-              <li><a href="/" >home</a></li>
-              <li><a href="/#about">about us</a></li>
-              <li><a href="/#partners">partners</a></li>
-              <li><a href="/#news">news</a></li>
-              <li><a href="/#players">our players</a></li>
-              <li><NavLink to="/gallery">gallery</NavLink></li>
-              <li><NavLink to="/contact">contact</NavLink></li>
+              <li>
+                <a href="/">home</a>
+              </li>
+              <li>
+                <a href="/#about">about us</a>
+              </li>
+              <li>
+                <a href="/#partners">partners</a>
+              </li>
+              <li>
+                <a href="/#news">news</a>
+              </li>
+              <li>
+                <a href="/#players">our players</a>
+              </li>
+              <li>
+                <NavLink to="/gallery">gallery</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">contact</NavLink>
+              </li>
             </ul>
             <div className={styles.social}>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={facebook} alt="" />
               </a>
-              <a href="https://www.twitter.com/fc_bethel">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.twitter.com/fc_bethel"
+              >
                 <img src={twitter} alt="" />
               </a>
-              <a href="https://www.instagram.com/fc___bethel_international">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/fc___bethel_international"
+              >
                 <img src={instagram} alt="" />
               </a>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={linkedin} alt="" />
               </a>
-              <a href="https://www.facebook.com/FC-Bethel-International-1625123401061554">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/FC-Bethel-International-1625123401061554"
+              >
                 <img src={youtube} alt="" />
               </a>
             </div>
           </>
         ) : (
-            <button onClick={this.handleOpenMenu} ref="hamburger" className={styles.hamburger}>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
-              <span style={{ backgroundColor: `${this.props.location.pathname === "/" || this.props.location.pathname === "/news" ? '#fff' : '#000'}` }}></span>
-            </button>
-          )}
+          <button
+            onClick={this.handleOpenMenu}
+            ref="hamburger"
+            className={styles.hamburger}
+          >
+            <span
+              style={{
+                backgroundColor: `${
+                  this.props.location.pathname === "/" ||
+                  this.props.location.pathname === "/news"
+                    ? "#fff"
+                    : "#000"
+                }`,
+              }}
+            ></span>
+            <span
+              style={{
+                backgroundColor: `${
+                  this.props.location.pathname === "/" ||
+                  this.props.location.pathname === "/news"
+                    ? "#fff"
+                    : "#000"
+                }`,
+              }}
+            ></span>
+            <span
+              style={{
+                backgroundColor: `${
+                  this.props.location.pathname === "/" ||
+                  this.props.location.pathname === "/news"
+                    ? "#fff"
+                    : "#000"
+                }`,
+              }}
+            ></span>
+          </button>
+        )}
         {mobileMenu}
       </nav>
-    )
+    );
   }
 }
 
