@@ -11,7 +11,7 @@ import udoh from "./images/players/udoh.jpg";
 import seyi from "./images/players/seyi.jpg";
 import ikhide from "./images/players/ikhide.jpg";
 
-import jimoh from "./images/players/jimoh.jpg";
+// import jimoh from "uploads/gallery/1605004971184jimoh2.jpeg";
 import daniel from "./images/players/daniel.jpg";
 import obinna from "./images/players/obinna.jpg";
 import sodiq from "./images/players/sodiq.jpg";
@@ -86,7 +86,7 @@ class App extends Component {
           {
             name: "Olagunju Nathaniel Ikhide",
             position: "Head Coach",
-            image: ikhide,
+            image: "uploads/gallery/1605004971242olagunju.jpg",
             bio: (
               <div>
                 <p>
@@ -129,7 +129,7 @@ class App extends Component {
           },
           {
             name: "Seyi Jones",
-            image: seyi,
+            image: "uploads/gallery/1605004971255seyi.jpg",
             position: "Team Manager",
             bio: (
               <div>
@@ -158,8 +158,8 @@ class App extends Component {
         goalkeepers: [
           {
             name: "Jimoh Godwin",
-            image: jimoh,
-            number: 1,
+            image: "uploads/gallery/1605004971184jimoh2.jpg",
+            number: 21,
             dob: "17.11.2003",
             age: 16,
             nationality: "Nigerian",
@@ -183,7 +183,7 @@ class App extends Component {
           },
           {
             name: "Daniel Emmanuel",
-            image: daniel,
+            image: "uploads/gallery/1605004970925daniel2.jpg",
             number: 1,
             dob: "17.05.2001",
             age: 18,
@@ -208,8 +208,8 @@ class App extends Component {
         defenders: [
           {
             name: "Obinna Franklin Agha",
-            image: obinna,
-            number: 1,
+            image: "uploads/gallery/1605004971221obinna2.jpg",
+            number: 7,
             dob: "04.12.2003",
             age: 16,
             nationality: "Nigerian",
@@ -232,8 +232,8 @@ class App extends Component {
           },
           {
             name: "Sodiq Adeyemi Ademola",
-            image: sodiq,
-            number: 1,
+            image: "uploads/gallery/1605004971261sodiq2.jpg",
+            number: 2,
             dob: "15.02.2002",
             age: 17,
             nationality: "Nigerian",
@@ -429,8 +429,8 @@ class App extends Component {
           },
           {
             name: "Bless Udom Aniekan",
-            image: bless,
-            number: 1,
+            image: "uploads/gallery/1605005268435bless2.jpg",
+            number: 5,
             dob: "14.02.2003",
             age: 16,
             nationality: "Nigerian",
@@ -453,8 +453,8 @@ class App extends Component {
           },
           {
             name: "Camara Billor",
-            image: camara,
-            number: 1,
+            image: "uploads/gallery/1605004970921camara2.jpg",
+            number: 13,
             dob: "04.05.2003",
             age: 16,
             nationality: "Nigerian",
@@ -480,8 +480,8 @@ class App extends Component {
           },
           {
             name: "Kehinde Noah Ayannubi",
-            image: kehinde,
-            number: 1,
+            image: "uploads/gallery/1605004971197kehinde2.jpg",
+            number: 10,
             dob: "14.02.2003",
             age: 16,
             nationality: "Nigerian",
@@ -504,8 +504,8 @@ class App extends Component {
           },
           {
             name: "Obiri Ugochukwu Chikora",
-            image: obiri,
-            number: 1,
+            image: "uploads/gallery/1605004971226obiri2.jpg",
+            number: 4,
             dob: "19.09.2001",
             age: 18,
             nationality: "Nigerian",
@@ -554,8 +554,8 @@ class App extends Component {
         forwards: [
           {
             name: "Maclyn Biokpo Jenewari",
-            image: maclyn,
-            number: 1,
+            image: "uploads/gallery/1605004971203maclyn2.jpg",
+            number: 17,
             dob: "25.01.2000",
             age: 19,
             nationality: "Nigerian",
@@ -578,8 +578,8 @@ class App extends Component {
           },
           {
             name: "John Bassey",
-            image: john,
-            number: 1,
+            image: "uploads/gallery/1605004971191john2.jpg",
+            number: 20,
             dob: "04.06.2002",
             age: 17,
             nationality: "Nigerian",
@@ -649,8 +649,8 @@ class App extends Component {
           },
           {
             name: "Samuel Anietie",
-            image: samuel,
-            number: 1,
+            image: "uploads/gallery/1605004971251samuel2.jpg",
+            number: 19,
             dob: "08.04.2001",
             age: 18,
             nationality: "Nigerian",
@@ -673,10 +673,10 @@ class App extends Component {
           },
           {
             name: "Okechukwu Nwanna",
-            image: okechukwu,
+            image: "uploads/gallery/1605004971251samuel2.jpg",
             number: 1,
             dob: "01.10.2000",
-            age: 19,
+            age: 9,
             nationality: "Nigerian",
             height: "6.1",
             weight: 79,
@@ -722,7 +722,7 @@ class App extends Component {
           },
           {
             name: "Muhammed Ibrahim Inuwa",
-            image: muhammed,
+            image: "uploads/gallery/1605005268608muhammed2.jpg",
             number: 1,
             dob: "01.12.2003",
             age: "16",
